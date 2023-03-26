@@ -6,6 +6,7 @@ import Weapons from "../pages/Weapons/Weapons";
 import Agent from "../pages/Agent/Agent";
 import Error404 from "../pages/Error404/Error404";
 import Map from "../pages/Map/Map";
+import Weapon from "../pages/Weapon/Weapon";
 
 function Routes() {
 	return (
@@ -19,7 +20,11 @@ function Routes() {
 				<Route index element={<Maps/>} />
 				<Route path=":map" element={<Map/>} />
 			</Route>
-			<Route path="/armas" element={<Weapons />} />
+			<Route path="/armas">
+				<Route index element={<Weapons />} />
+				<Route path=":weapon" element={<Weapon />} />
+			</Route>
+			
 			<Route path="*" element={<Error404 />} />
 		</ReactDomRoutes>
 	);

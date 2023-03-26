@@ -32,6 +32,7 @@ export const AccordionSummary = styled((props) => (
 export const AccordionDetails = styled(MuiAccordionDetails)(() => ({
     fontFamily: "valorant",
     display:"flex",
+    justifyContent:"center",
     flexWrap: "wrap",
     gap: "10px",
     backgroundColor:"#181818",

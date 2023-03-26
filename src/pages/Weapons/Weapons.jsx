@@ -1,5 +1,4 @@
 import React from 'react'
-import { WeaponsCardsContainer } from './WeaponsStyles'
 
 import { WEAPONS_MODEL } from '../../data/Models'
 
@@ -7,13 +6,15 @@ import { useState } from 'react'
 
 import { Accordion, AccordionSummary, AccordionDetails } from './Accordion'
 import WeaponCard from '../../components/WeaponCard/WeaponCard'
+import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
+import { Link } from 'react-router-dom'
 
 const Weapons = () => {
 
   const [weaponCategory, setWeaponCategory] = useState(WEAPONS_MODEL)
 
   return (
-    <WeaponsCardsContainer>
+    <SectionWrapper>
       {
         weaponCategory?.map((category) => {
           return <Accordion 
@@ -25,13 +26,16 @@ const Weapons = () => {
             </AccordionSummary>
             <AccordionDetails>
               {category.weapons.map((weapon) => {
-                return <WeaponCard title={weapon.name} img={weapon.img} />
+                return <Link key={weapon.id} to={weapon.name}>
+                  <WeaponCard title={weapon.name} img={weapon.img} />
+                </Link>
+                
               })}
             </AccordionDetails>
           </Accordion>
         })
       }
-    </WeaponsCardsContainer>
+    </SectionWrapper>
   )
 }
 

@@ -183,7 +183,7 @@ export const WEAPONS_MODEL = [
 	},
 	{
 		id: 2,
-		categoryName: "SMGs",
+		categoryName: "SMG's",
 		weapons: [
 			{
 				id: 1,

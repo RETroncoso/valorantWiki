@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import HorizontalCard from '../../components/HorizontalCard/HorizontalCard'
+import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
 
 import { MAPS_MODEL } from '../../data/Models'
-import { MapsCardsContainer } from './MapsStyles'
 
 const Maps = () => {
 
   const [maps, setMaps] = useState(MAPS_MODEL)
 
-  return ( <MapsCardsContainer>
+  return ( <SectionWrapper>
     {
       maps.map((map) => {
         return <Link key={map.id} to={map.name}>
@@ -19,7 +19,7 @@ const Maps = () => {
 
       })
     }
-  </MapsCardsContainer>
+  </SectionWrapper>
     
   )
 }

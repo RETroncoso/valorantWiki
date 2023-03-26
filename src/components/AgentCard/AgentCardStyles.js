@@ -33,12 +33,10 @@ export const AgentCardContainer = styled.div`
 `;
 
 export const CardImg = styled.img`
-	width: 100%;
 	height: 100%;
 	border-radius: 10px;
 	position: absolute;
 	bottom: 0;
-	left: 0;
 	z-index: 2;
 	transition: all 0.5s ease;
 	filter: brightness(0.5) opacity(0.7);
