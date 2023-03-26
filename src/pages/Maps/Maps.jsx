@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import HorizontalCard from '../../components/HorizontalCard/HorizontalCard'
+import HorizontalCard from './HorizontalCard/HorizontalCard'
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
 
 import { MAPS_MODEL } from '../../data/Models'

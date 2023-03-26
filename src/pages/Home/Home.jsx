@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeCard from '../../components/HomeCard/HomeCard'
+import HomeCard from './HomeCard/HomeCard'
 import { HomeContainer } from './HomeStyles'
 import { Link } from 'react-router-dom'
 

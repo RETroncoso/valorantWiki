@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { AGENTS_MODEL } from '../../data/Models'
-import AgentCard from '../../components/AgentCard/AgentCard'
+import AgentCard from "./AgentCard/AgentCard"
 import { Link } from 'react-router-dom'
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
 
