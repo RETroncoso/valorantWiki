@@ -9,7 +9,7 @@ export const WeaponCardContainer = styled.div`
 	font-size: 16px;
 	transition: all 0.5s ease;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
 	cursor: pointer;
@@ -28,6 +28,7 @@ export const WeaponCardContainer = styled.div`
 
 export const CardImg = styled.img`
 	width: 90%;
+	max-height: 75%;
 	object-fit: contain;
 	background-position: cover;
 	border-radius: 10px;
@@ -36,6 +37,8 @@ export const CardImg = styled.img`
 `;
 
 export const CardTitle = styled.h2`
+	position: absolute;
+	bottom: 5px;
 	width: 100%;
 	text-align: center;
 	color: #fa4454;
