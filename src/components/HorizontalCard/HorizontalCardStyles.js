@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
-	width: 100%;
-	max-width: 350px;
-	min-width: 250px;
-	height: 350px;
+export const HorizontalCardContainer = styled.div`
+	width: 350px;
+	height: 250px;
 	margin: 10px;
 	border-radius: 10px;
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
 	font-size: 16px;
 	transition: all 0.5s ease;
 	display: flex;
@@ -18,12 +16,8 @@ export const CardContainer = styled.div`
 	transition: all 0.5s ease;
 	position: relative;
 	&:hover {
-		transform: scaleY(1.05);
+		transform: scale(1.1);
 		transition: all 0.5s ease;
-		p {
-			opacity: 1;
-			max-height: 20px;
-		}
 		img {
 			filter: brightness(0.5);
 			transition: all 0.5s ease;
@@ -52,17 +46,4 @@ export const CardTitle = styled.h2`
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-family: "VALORANT", sans-serif;
-`;
-
-export const CardText = styled.p`
-	width: 80%;
-	font-size: 16px;
-	text-align: center;
-	margin-top: 20px;
-	color: white;
-	font-weight: 600;
-	letter-spacing: 2px;
-	opacity: 0;
-	max-height: 0;
-	transition: all 0.3s ease;
 `;
