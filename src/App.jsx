@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Layout from "./pages/Layout/Layout";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
+
 function App() {
 	return (
 		<>
