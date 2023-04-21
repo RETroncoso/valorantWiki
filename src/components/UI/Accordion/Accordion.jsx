@@ -9,13 +9,13 @@ export const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(() => ({
     color: "#fa4454",
-    width: "900px",
+    width: "100%",
     borderRadius: "20px",
 }));
 
 export const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '1rem', color: "#fa4454" }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '1rem', color: "#fa4454" }}/>}
     {...props}
   />
 ))(() => ({

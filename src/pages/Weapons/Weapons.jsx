@@ -4,7 +4,7 @@ import { WEAPONS_MODEL } from '../../data/Models'
 
 import { useState } from 'react'
 
-import { Accordion, AccordionSummary, AccordionDetails } from './Accordion'
+import { Accordion, AccordionSummary, AccordionDetails } from '../../components/UI/Accordion/Accordion'
 import WeaponCard from './WeaponCard/WeaponCard'
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
 import { Link } from 'react-router-dom'
