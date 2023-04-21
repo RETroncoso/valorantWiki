@@ -13,6 +13,7 @@ export const ImgContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	align-self: center;
 	img {
 		height: 50px;
 	}

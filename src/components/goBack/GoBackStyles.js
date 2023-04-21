@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const LinkContainer = styled.div`
-	height: 80%;
 	display: flex;
 	align-items: center;
 	justify-items: center;

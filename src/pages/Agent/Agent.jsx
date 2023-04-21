@@ -1,11 +1,20 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { AgentWrapper, DataContainerStyled, ImageContainerStyled } from './AgentStyles';
+import { useLocation } from 'react-router-dom';
 
 const Agent = () => {
-    const {agent} = useParams();
+  const {name, role, biography,abilities, image} = useLocation().state;
   return (
-    
-    <div>{agent}</div>
+    <AgentWrapper>
+      <ImageContainerStyled>
+        <img src={image} alt={name} />
+      </ImageContainerStyled>
+      <DataContainerStyled>
+        <h2>{name}</h2>
+        <h3>{role}</h3>
+        <p>{biography}</p>
+      </DataContainerStyled>
+    </AgentWrapper>
   )
 }
 
