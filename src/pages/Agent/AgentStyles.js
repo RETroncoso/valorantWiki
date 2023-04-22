@@ -9,6 +9,10 @@ export const AgentWrapper = styled.div`
 	padding: 40px;
 	gap: 20px;
 	max-width: 1200px;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 5px;
+	}
 `;
 
 export const ImageContainerStyled = styled.div`
@@ -19,6 +23,13 @@ export const ImageContainerStyled = styled.div`
 	justify-content: center;
 	img {
 		height: 500px;
+	}
+	@media (max-width: 768px) {
+		padding-top: 15px;
+		width: 95%;
+		img {
+			height: 400px;
+		}
 	}
 `;
 
@@ -37,5 +48,8 @@ export const DataContainerStyled = styled.div`
 	}
 	p {
 		font-size: 1.25rem;
+	}
+	@media (max-width: 768px) {
+		width: 95%;
 	}
 `;
