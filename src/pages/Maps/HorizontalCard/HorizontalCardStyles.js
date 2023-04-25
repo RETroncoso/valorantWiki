@@ -19,7 +19,7 @@ export const HorizontalCardContainer = styled.div`
 		transform: scale(1.1);
 		transition: all 0.5s ease;
 		img {
-			filter: brightness(0.5);
+			filter: brightness(0.65);
 			transition: all 0.5s ease;
 		}
 	}

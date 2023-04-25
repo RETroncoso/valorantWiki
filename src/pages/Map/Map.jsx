@@ -1,12 +1,41 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { CarouselStyled, ImageContainer, MapDataContainer, MapWrapper } from './MapStyles'
+import Typewriter from "typewriter-effect"
 
 const Map = () => {
 
-    const {map} = useParams()
-
+  const {name, description, images} = useLocation().state
   return (
-    <div>{map}</div>
+    <MapWrapper>
+      <CarouselStyled
+        // animation='slide'
+        navButtonsAlwaysVisible="true"
+      >
+        {
+          images.map((image, i) => {
+            return <ImageContainer>
+              <img src={image} alt={name} />
+            </ImageContainer>
+       
+          })
+        }
+      </CarouselStyled>
+      <MapDataContainer>
+        <h2>
+          <Typewriter
+            options={{
+                strings: [name ],
+                autoStart: true,
+                loop: true,
+                delay: 100
+            }}
+        />
+        </h2>
+        
+        <p>{description}</p>
+      </MapDataContainer>
+    </MapWrapper>
   )
 }
 

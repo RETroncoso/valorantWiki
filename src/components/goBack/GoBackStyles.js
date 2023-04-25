@@ -10,11 +10,11 @@ export const LinkContainer = styled.div`
 	left: 30px;
 	font-family: valorant;
 	color: #fa4454;
-	cursor: pointer;
 	span {
 		width: 100%;
 		height: 100%;
 		display: flex;
 		gap: 5px;
+		cursor: pointer;
 	}
 `;
