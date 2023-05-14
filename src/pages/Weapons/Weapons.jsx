@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { WEAPONS_MODEL } from '../../data/Models'
 
@@ -8,10 +8,37 @@ import { Accordion, AccordionSummary, AccordionDetails } from '../../components/
 import WeaponCard from './WeaponCard/WeaponCard'
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
 import { Link } from 'react-router-dom'
+import { getAllWeapons } from '../../queries/weaponsQueries'
 
 const Weapons = () => {
 
-  const [weaponCategory, setWeaponCategory] = useState(WEAPONS_MODEL)
+  const [weaponCategory, setWeaponCategory] = useState([])
+
+  console.log(weaponCategory);
+
+  useEffect(() => {
+    try {
+      (async () => {
+        const data = await getAllWeapons();
+
+        const resultArray = Object.values(
+          data.reduce((acc, weapon) => {
+            const weaponType = weapon.type;
+            if (!acc[weaponType]) {
+              acc[weaponType] = { type: weaponType, items: [] };
+            }
+            acc[weaponType].items.push(weapon);
+            return acc;
+          }, {})
+        );
+
+        setWeaponCategory(resultArray);
+
+      })()
+    } catch (error) {
+      console.log(error);
+    }
+  }, [])
 
   return (
     <SectionWrapper>
@@ -19,16 +46,15 @@ const Weapons = () => {
         weaponCategory?.map((category) => {
           return <Accordion 
             className="accordionStyle" 
-            key={category.id}
+            key={category.type}
           >
             <AccordionSummary>
-              {category.categoryName}
+              {category.type}
             </AccordionSummary>
             <AccordionDetails>
-              {category.weapons.map((weapon) => {
-                return <Link key={weapon.id} to={weapon.name}>
-                  <WeaponCard title={weapon.name} img={weapon.img} />
-                </Link>
+              {category.items.map((weapon) => {
+                return <WeaponCard key={weapon._id} weapon={{...weapon}} />
+            
                 
               })}
             </AccordionDetails>

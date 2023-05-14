@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import HorizontalCard from './HorizontalCard/HorizontalCard'
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
 import {getAllMaps} from "../../queries/mapsQueries"
 
-import { MAPS_MODEL } from '../../data/Models'
 import { Loader } from '../../components/UI/Loader/Loader'
 
 const Maps = () => {

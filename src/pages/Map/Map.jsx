@@ -9,7 +9,6 @@ const Map = () => {
   return (
     <MapWrapper>
       <CarouselStyled
-        // animation='slide'
         navButtonsAlwaysVisible="true"
       >
         {

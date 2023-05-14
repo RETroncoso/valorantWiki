@@ -1,11 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 const Weapon = () => {
-    const {weapon} = useParams()
+    const {bullets, damage, description, equipSpeed, fireRate, img, name, penetration, price, reloadSpeed, shotType, type} = useLocation().state
+
 
     return (
-      <div>{weapon}</div>
+      <div>{name}</div>
     )
 }
 
