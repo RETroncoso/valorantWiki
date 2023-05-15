@@ -1,20 +1,17 @@
 import React, { useEffect } from 'react'
 
-import { WEAPONS_MODEL } from '../../data/Models'
-
 import { useState } from 'react'
 
 import { Accordion, AccordionSummary, AccordionDetails } from '../../components/UI/Accordion/Accordion'
 import WeaponCard from './WeaponCard/WeaponCard'
 import { SectionWrapper } from '../../components/SectionWrapper/SectionWrapper'
-import { Link } from 'react-router-dom'
 import { getAllWeapons } from '../../queries/weaponsQueries'
+import { Loader } from '../../components/UI/Loader/Loader'
 
 const Weapons = () => {
 
   const [weaponCategory, setWeaponCategory] = useState([])
-
-  console.log(weaponCategory);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     try {
@@ -31,7 +28,7 @@ const Weapons = () => {
             return acc;
           }, {})
         );
-
+        setLoading(false)
         setWeaponCategory(resultArray);
 
       })()
@@ -60,6 +57,9 @@ const Weapons = () => {
             </AccordionDetails>
           </Accordion>
         })
+      }
+      {
+        loading && <Loader/>
       }
     </SectionWrapper>
   )

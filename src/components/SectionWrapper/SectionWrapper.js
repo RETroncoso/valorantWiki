@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionWrapper = styled.section`
 	max-width: 1200px;
-	width: 100%;
+	width: 90%;
 	height: 100%;
 	display: flex;
 	flex-wrap: wrap;

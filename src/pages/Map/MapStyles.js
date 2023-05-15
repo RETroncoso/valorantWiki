@@ -10,7 +10,7 @@ export const MapWrapper = styled.div`
 	padding: 40px;
 	gap: 30px;
 	max-width: 1200px;
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		flex-direction: column;
 		padding: 5px;
 	}
@@ -18,6 +18,9 @@ export const MapWrapper = styled.div`
 
 export const CarouselStyled = styled(Carousel)`
 	min-width: 600px;
+	@media (max-width: 800px) {
+		min-width: 300px;
+	}
 `;
 
 export const ImageContainer = styled.div`

@@ -13,7 +13,7 @@ const Map = () => {
       >
         {
           images.map((image, i) => {
-            return <ImageContainer>
+            return <ImageContainer key={name}>
               <img src={image} alt={name} />
             </ImageContainer>
        
