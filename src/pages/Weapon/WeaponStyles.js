@@ -10,7 +10,6 @@ export const CoreDataContainer = styled.div`
 		flex-direction: column;
 		gap: 30px;
 		margin-top: 20px;
-		align-items: flex-start;
 	}
 `;
 
@@ -26,6 +25,9 @@ export const ImgContainer = styled.div`
 	}
 	@media (max-width: 850px) {
 		width: 75%;
+	}
+	@media (max-width: 600px) {
+		width: 90%;
 	}
 `;
 
