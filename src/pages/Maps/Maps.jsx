@@ -25,7 +25,7 @@ const Maps = () => {
   return ( <SectionWrapper>
     {
       maps?.map((map) => {
-        return <HorizontalCard key={map.id} map={{...map}} /> 
+        return <HorizontalCard key={map._id} map={{...map}} /> 
       })
     }
     {

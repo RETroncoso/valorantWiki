@@ -7,6 +7,7 @@ import Agent from "../pages/Agent/Agent";
 import Error404 from "../pages/Error404/Error404";
 import Map from "../pages/Map/Map";
 import Weapon from "../pages/Weapon/Weapon";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 function Routes() {
 	return (
