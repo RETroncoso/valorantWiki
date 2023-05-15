@@ -54,6 +54,9 @@ export const MiscDataContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 60%;
+	@media (max-width: 850px) {
+		width: 95%;
+	}
 `;
 
 export const DataRow = styled.div`
